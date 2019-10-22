@@ -64,13 +64,25 @@
 			}
 		}
 
-		public function editarPeloId($nome,$id){
+		public function editarPeloId($nome,$email,$id){
 			
-				$sql = "UPDATE contatos SET nome = :nome WHERE id = :id";
+			if ($this->existeEmail($email) == false) {
+				
+	
+				$sql = "UPDATE contatos SET nome = :nome, email = :email WHERE id = :id";
 				$sql = $this->pdo->prepare($sql);
 				$sql->bindValue(":nome", $nome);
+				$sql->bindValue(":email", $email);
 				$sql->bindValue(":id", $id);
 				$sql->execute();
+
+				return true;
+
+			}else{
+				// não consegui colocar essa msg echo "Esse email já existe!";
+				return false;
+
+			}
 		}
 
 		public function editar($nome,$email){

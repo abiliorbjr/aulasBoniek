@@ -24,7 +24,9 @@
  	Nome:<br>
  	<input type="text" name="nome" value="<?php echo $info['nome']; ?>"><br><br>
  	E-mail:<br>
- 	<?php echo $info['email']; ?><br><br>
+ 	<input type="email" name="email" value="<?php echo $info['email']; ?>">
+ 	<!-- aqui em baixo eu só passo a informação do email tirei ? para o comentário -->
+ 	<!-- <php echo $info['email']; ?><br><br> -->
 
  	<input type="submit" value="Salvar">
  </form>
