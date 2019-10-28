@@ -4,9 +4,9 @@
 		$user = "root";
 		$pass = "";
 
-		$pdo = new PDO($conexao,$user,$pass);
+		$pdoo = new PDO($conexao,$user,$pass);
 
-		echo "Conectado com sucesso!";
+		echo "Conectado com sucesso conexao!";
 	} catch (PDOException $e) {
 		echo "Erro ao conectar".$e->getMessage();
 	}

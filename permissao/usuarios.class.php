@@ -1,11 +1,12 @@
 <?php 
+
 	class Usuarios{
 		private $pdo;
 		private $id;
 		private $permissoes;
 
-		public function __construct($pdo){
-			$this->pdo = $pdo;
+		public function __construct($pdoo){
+			$this->pdo = $pdoo;
 		}
 		public function fazerLogin($email, $senha){
 			$sql ="SELECT * FROM usuarios WHERE email = :email AND senha = :senha";

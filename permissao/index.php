@@ -8,7 +8,7 @@
 		exit;
 	}
 
-	$usuarios = new Usuarios($pdo);
-	$usuarios->setUsuarios($_SESSION['logado']);
+	$usuarios = new Usuarios($pdoo);
+	$usuarios->setUsuario($_SESSION['logado']);
  ?>
  <h1>Sistema</h1>

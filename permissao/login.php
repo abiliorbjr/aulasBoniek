@@ -4,6 +4,7 @@
 	// para fazer esse comentário ctrl + :
 	require 'usuarios.class.php';
 	
+	
 	if (!empty($_POST['email'])) {
 		$email = strtolower(addslashes($_POST['email']));
 		$senha = addslashes(md5($_POST['senha']));
