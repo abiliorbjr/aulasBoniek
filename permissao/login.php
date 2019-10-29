@@ -1,7 +1,7 @@
 <?php 
 	session_start();
-	// require 'conexao.php';
-	// para fazer esse comentário ctrl + :
+	//require 'conexao.php';
+	// para fazer esse comentário ctrl :
 	require 'usuarios.class.php';
 	
 	
@@ -9,7 +9,7 @@
 		$email = strtolower(addslashes($_POST['email']));
 		$senha = addslashes(md5($_POST['senha']));
 
-		$usuarios = new Usuarios($pdo);
+		$usuarios = new Usuarios($pdoo);
 
 		if ($usuarios->fazerLogin($email,$senha)) {
 			header("Location:index.php");

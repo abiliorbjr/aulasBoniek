@@ -9,6 +9,10 @@
 			background-color: #DDD;
 			border: 1px solid #000;
 		}
+		.row{
+			background-color: #FF2298;
+			padding: 10px;
+		}
 	</style>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
@@ -17,15 +21,16 @@
 </head>
 <body>
 	<!-- .divnomeDaClasse -->
-	 <!-- <div class="container" style="background-color: #FF1111"> -->
-	 		<div class="row">
-	 			<div class="col-sm" style="background-color: #00FF00">Primeira</div>
+	 <div class="container" style="background-color: #FF1111">
+	 		<div class="row justify-content-center"> <!-- esse comando alinha a esquerda,start na esquerda, center no centro, end na direita, around elas ficam em volta, between espalhado mas o meio fica certo-->
+					<!-- para alinhar verticalmente usamos align-items-center -->
+
+	 			<div class="col-3" style="background-color: #00FF00">Primeira</div>
 	 			<div class="col-sm-2 order-last">Segunda</div>
-	 			<div class="col-sm-2">terceira</div>
+	 			<div class="col-3">terceira</div>
 	 			<div class="w-100"></div>
-	 			<div class="col-sm" style="background-color: #00FF00">quarta</div>
-	 			<div class="col-sm">Quinta</div>
-	 			<div class="col order-first">Sexta</div>
+	 			<!-- <div class="col-sm" style="background-color: #00FF00">quarta</div> -->
+	 			
 	 		</div>
 			<!-- <h1>Abílio Rodrigues Bizerra Júnior</h1> -->
 	</div>

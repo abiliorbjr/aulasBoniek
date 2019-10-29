@@ -1,13 +1,14 @@
 <?php 
-
+	require 'conexao.php';
 	class Usuarios{
 		private $pdo;
 		private $id;
-		private $permissoes;
+		private $permissoas;
 
 		public function __construct($pdoo){
 			$this->pdo = $pdoo;
 		}
+
 		public function fazerLogin($email, $senha){
 			$sql ="SELECT * FROM usuarios WHERE email = :email AND senha = :senha";
 			$sql = $this->pdo->prepare($sql);
@@ -37,7 +38,7 @@
 
 			if ($sql->rowCount() > 0) {
 				$sql = $sql->fetch();
-				$this->permissoes = explode(',',$sql['permissoes']);
+				$this->permissoas = explode(',',$sql['permissoes']);
 			}
 		}
 	}
