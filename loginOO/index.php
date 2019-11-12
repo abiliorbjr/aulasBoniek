@@ -1,4 +1,14 @@
 <?php 
+	// require 'usuario.class.php';
+	session_start();
+	
+	$conectar = new Contato();
+
+		if (isset($_SESSION['id']) && !empty($_SESSION['id'])) {
+			echo "Área restrita";		
+		}else{
+			header("location:login.php");
+		}
 
  ?>
 
@@ -7,7 +17,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-	<title>Projeto Login com Ajax</title>
+	<title>LOGIN ORIENTADO A OBJETO ABILIO</title>
 	<style type="text/css">
 		.row [class^=col-], .row .col{
 			background-color: #DDD;
@@ -25,28 +35,14 @@
 </head>
 <body>
 	<!-- .divnomeDaClasse -->
-	 <!-- <div class="container" style="background-color: #6495ED">
-	 	<div>Obrigado meu Deus!</div>	
-	</div> -->
-	
-	<div class="container">
-			<form id="forma" method="POST">
-				E-mail aba:<br>
-				<input type="email" name="email"><br><br>
-				Senha:<br>
-				<input type="password" name="senha"><br><br>
-				<input type="submit" value="Entrar">
-			</form>
+	 <div class="container" style="background-color: #6495ED">
+	 	<div>
+	 		Obrigado meu Deus!
+	 	</div>	
 	</div>
-
-
 	<!-- esse script poderia ser colocado no meta, mas aqui ele carrega mais rápido -->
 	<script type="text/javascript" src="../bootstrap4/js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="../bootstrap4/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../bootstrap4/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../bootstrap4/js/script.js"></script>
 </body>
 </html>
-
-
-

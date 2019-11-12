@@ -1,5 +1,6 @@
 <?php 
-
+	session_start();
+	require'usuario.class.php';
  ?>
 
  <!DOCTYPE html>
@@ -7,7 +8,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-	<title>Projeto Login com Ajax</title>
+	<title>CRUD</title>
 	<style type="text/css">
 		.row [class^=col-], .row .col{
 			background-color: #DDD;
@@ -25,28 +26,20 @@
 </head>
 <body>
 	<!-- .divnomeDaClasse -->
-	 <!-- <div class="container" style="background-color: #6495ED">
-	 	<div>Obrigado meu Deus!</div>	
-	</div> -->
-	
-	<div class="container">
-			<form id="forma" method="POST">
-				E-mail aba:<br>
-				<input type="email" name="email"><br><br>
-				Senha:<br>
-				<input type="password" name="senha"><br><br>
-				<input type="submit" value="Entrar">
-			</form>
+	 <div class="container" style="background-color: #6495ED">
+	 	<div>
+	 		<form action="usuario.class.php" method="POST">
+	 			E-mail:<br>
+	 			<input type="email" name="email"><br>
+	 			Senha:<br>
+	 			<input type="password" name="senha"><br><br>
+	 			<input type="submit" value="Entrar">
+	 		</form>
+	 	</div>	
 	</div>
-
-
 	<!-- esse script poderia ser colocado no meta, mas aqui ele carrega mais rápido -->
 	<script type="text/javascript" src="../bootstrap4/js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="../bootstrap4/js/jquery.min.js"></script>
 	<script type="text/javascript" src="../bootstrap4/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="../bootstrap4/js/script.js"></script>
 </body>
 </html>
-
-
-
