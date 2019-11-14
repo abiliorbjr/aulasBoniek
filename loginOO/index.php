@@ -1,5 +1,5 @@
 <?php 
-	// require 'usuario.class.php';
+	require 'usuario.class.php';
 	session_start();
 	
 	$conectar = new Contato();

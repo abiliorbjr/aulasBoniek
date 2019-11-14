@@ -2,8 +2,8 @@
 		class Contato{
 
 			private $pdo;
-			public $emaill = addslashes(strtolower($_POST['email']));
-			public $senhaa = addslashes($_POST['senha']);
+			private $emaill = addslashes(strtolower($_POST['email']));
+			private $senhaa = addslashes($_POST['senha']);
 			
 				public function __construct(){
 					$this->pdo = new PDO("mysql:dbname=usuarios;host=localhost","root","");
