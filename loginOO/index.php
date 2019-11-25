@@ -39,6 +39,8 @@
 	 	<div>
 	 		Obrigado meu Deus!
 	 	</div>	
+
+	 	<a href="sair.php"><button>Sair</button></a>
 	</div>
 	<!-- esse script poderia ser colocado no meta, mas aqui ele carrega mais rápido -->
 	<script type="text/javascript" src="../bootstrap4/js/jquery-3.2.1.min.js"></script>

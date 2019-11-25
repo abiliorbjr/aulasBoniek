@@ -2,8 +2,8 @@
 		class Contato{
 
 			private $pdo;
-			private $emaill = addslashes(strtolower($_POST['email']));
-			private $senhaa = addslashes($_POST['senha']);
+			public $emaill;
+			public $senhaa;
 			
 				public function __construct(){
 					$this->pdo = new PDO("mysql:dbname=usuarios;host=localhost","root","");
@@ -13,7 +13,10 @@
 			public function logar($emaill,$senhaa){
 				if (isset($_POST['email']) && !empty($_POST['email'])){
 
-						$sql = ("SELECT * FROM login WHERE email = :emaill AND senha = :senhaa");
+					$emaill  = addslashes(strtolower($_POST['email']));
+					$senhaa = addslashes($_POST['senha']);
+
+						$sql = "SELECT * FROM login WHERE email = :emaill AND senha = :senhaa";
 						$sql= $this->pdo->prepare($sql);
 						$sql->bindValue(":emaill",$emaill);
 						$sql->bindValue(":senhaa",md5($senhaa));
@@ -21,10 +24,14 @@
 
 
 						if ($sql->rowCount() > 0 ) {
+
 								$dados = $sql->fetch();
 								$_SESSION['id'] = $dados['id'];
-								header("location:index.php");	
+								header("Location:index.php");
+								// var_dump($_SESSION);	
 						}else{
+
+							echo "E-mail e/ou senha incorretos!";
 							header("Location:login.php");
 						}
 				}

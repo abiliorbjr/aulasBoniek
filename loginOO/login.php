@@ -9,7 +9,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 	<title>CRUD</title>
-	<style type="text/css">
+	<!-- <style type="text/css">
 		.row [class^=col-], .row .col{
 			background-color: #DDD;
 			border: 1px solid #000;
@@ -18,10 +18,11 @@
 			background-color: #FF2298;
 			padding: 10px;
 		}
-	</style>
+	</style> -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	
 	<link rel="stylesheet" href="../bootstrap4/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="estilo.css">
 	
 </head>
 <body>

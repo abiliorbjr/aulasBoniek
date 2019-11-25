@@ -43,7 +43,6 @@ pagina de login
 			<input type="password" name="senha"><br><br>
 			
 			<input type="submit" value="Entrar">
-
 	</form>
 
 </body>
